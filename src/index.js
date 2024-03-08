@@ -49,7 +49,7 @@ function loadBreeds() {
       if (breedSelect.length === 0) {
         const option = document.createElement('option');
         option.value = '';
-        option.textContent = '';
+        option.textContent = 'buscar';
         breedSelect.appendChild(option);
       }
       breeds.forEach(breed => {
