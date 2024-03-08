@@ -46,6 +46,12 @@ function loadBreeds() {
   fetchBreeds()
     .then(breeds => {
       const breedSelect = document.querySelector('.breed-select');
+      if (breedSelect.length === 0) {
+        const option = document.createElement('option');
+        option.value = '';
+        option.textContent = '';
+        breedSelect.appendChild(option);
+      }
       breeds.forEach(breed => {
         const option = document.createElement('option');
         option.value = breed.id;
